@@ -1,0 +1,144 @@
+{
+  "common": {
+    "company": "Oqoltin ta'mir"
+  },
+  "hero": {
+    "title": "Building with integrity. Creating lasting value.",
+    "subtitle": "Oqoltin ta'mir is a construction company delivering residential and commercial projects across Uzbekistan.",
+    "cta_primary": "Get a quote",
+    "cta_secondary": "View projects",
+    "image_alt": "Construction site with cranes and workers",
+    "points": {
+      "experience": "15+ years experience",
+      "projects": "150+ projects delivered",
+      "locations": "Nationwide presence"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "End-to-end delivery from concept to handover.",
+    "items": {
+      "general": { "title": "General Construction & Social Facilities", "desc": "Construction and repair of residential and social facilities with quality control." },
+      "melioration": { "title": "Land Reclamation & Irrigation", "desc": "Water supply systems and land reclamation works." },
+      "electrical": { "title": "High-Voltage Electrical Networks & Equipment Construction", "desc": "Construction and installation of high-voltage electrical networks and equipment." }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of our recent work.",
+    "cta": "Discuss your project",
+    "card_alt": "Project image",
+    "cards": {
+      "title_1": "Residential Complex",
+      "desc_1": "15-story residential block with underground parking.",
+      "images_1": [
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20exterior",
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20interior",
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20parking"
+      ],
+      "title_2": "Retail Fit-Out",
+      "desc_2": "High-end interior fit-out for flagship store.",
+      "images_2": [
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20entrance",
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20interior",
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20fitting%20room"
+      ],
+      "title_3": "Logistics Hub",
+      "desc_3": "Industrial warehouse with office mezzanine.",
+      "images_3": [
+        "/placeholder.svg?height=220&width=480&query=warehouse%20exterior",
+        "/placeholder.svg?height=220&width=480&query=warehouse%20interior",
+        "/placeholder.svg?height=220&width=480&query=warehouse%20office%20area"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Oqoltin Ta'mir",
+    "image_alt": "Engineers reviewing blueprints",
+    "body": "Oqoltin Ta'mir LLC is a company with extensive experience that has been successfully operating in the Uzbekistan market since 2009, specializing in construction, technical services, and energy sectors.",
+    "founder": "Our company founder is a specialist with 40 years of engineering and management experience, and since its inception, the company has been steadily developing and successfully implementing many major projects.",
+    "activities": [
+      "General construction works",
+      "Irrigation and land reclamation systems development",
+      "High-voltage electrical networks and energy equipment construction"
+    ],
+    "licenses": "We have special licenses and relevant certificates for the construction of electrical networks and facilities, which confirms our full legal and technical competence in this field.",
+    "certificates": [
+      "Uz DSt ISO 9001:2015 — Quality Management System",
+      "Uz DSt ISO 14001:2019 — Environmental Management System",
+      "Uz DSt ISO 45001:2020 — Occupational Health and Safety Management System",
+      "License and certificate for construction of high-voltage electrical networks and equipment"
+    ],
+    "certificate_files": [
+      {
+        "id": "iso9001",
+        "name": "ISO 9001:2015 Quality Management",
+        "filename": "OQOLTIN TA`MIR 9001.pdf",
+        "description": "Quality Management System Certificate - International standard for quality management systems",
+        "icon": "📄"
+      },
+      {
+        "id": "iso14001",
+        "name": "ISO 14001:2019 Environmental Management",
+        "filename": "OQOLTIN TA`MIR 14001.pdf",
+        "description": "Environmental Management System Certificate - International standard for environmental management",
+        "icon": "🌱"
+      },
+      {
+        "id": "iso45001",
+        "name": "ISO 45001:2020 Occupational Health & Safety",
+        "filename": "OQOLTIN TA`MIR 45001.pdf",
+        "description": "Occupational Health and Safety Management System Certificate - International standard for workplace safety",
+        "icon": "🛡️"
+      },
+      {
+        "id": "electrical_license",
+        "name": "Electrical Networks Construction License",
+        "filename": "litsenzya.pdf",
+        "description": "Special license for construction of electrical networks and facilities",
+        "icon": "⚡"
+      },
+      {
+        "id": "company_registration",
+        "name": "Company Registration Certificate",
+        "filename": "OQOLTIN TA`MIR XK.pdf",
+        "description": "Official company registration and business license",
+        "icon": "🏢"
+      }
+    ],
+    "technical_base": [
+      "Flatbed truck",
+      "Mobile crane",
+      "Excavator",
+      "Manipulator"
+    ],
+    "why_choose_us": [
+      "15+ years of stable operation",
+      "40 years of professional management experience",
+      "Special licenses and certificates for electrical networks",
+      "Management systems compliant with ISO international standards",
+      "Strong technical fleet and experienced team",
+      "Reliability, quality, and strict adherence to deadlines"
+    ],
+    "tagline": "Oqoltin Ta'mir — Quality construction. Licensed technical approach. Professional service in energy solutions."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Tell us about your project. We’ll get back within one business day.",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "form": {
+      "name": "Your name",
+      "name_ph": "John Smith",
+      "email": "Email",
+      "email_ph": "you@example.com",
+      "phone": "Phone",
+      "phone_ph": "+998 90 123 45 67",
+      "message": "Message",
+      "message_ph": "Project scope, timeline, budget...",
+      "submit": "Send message",
+      "success": "Thanks! We will contact you soon."
+    }
+  }
+}

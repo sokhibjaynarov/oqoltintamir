@@ -1,0 +1,144 @@
+{
+  "common": {
+    "company": "Oqoltin ta'mir"
+  },
+  "hero": {
+    "title": "Halollik bilan quramiz. Qadriyat yaratamiz.",
+    "subtitle": "Oqoltin ta'mir — O'zbekistonda turar-joy va tijorat loyihalarini amalga oshiruvchi qurilish kompaniyasi.",
+    "cta_primary": "Taklif oling",
+    "cta_secondary": "Loyihalarimiz",
+    "image_alt": "Qurilish maydoni, kranlar va ishchilar",
+    "points": {
+      "experience": "15+ yillik tajriba",
+      "projects": "150+ yakunlangan loyiha",
+      "locations": "Butun respublika bo'ylab"
+    }
+  },
+  "services": {
+    "title": "Xizmatlarimiz",
+    "subtitle": "G'oyadan topshirishgacha to'liq xizmat ko'rsatamiz.",
+    "items": {
+      "general": { "title": "Umumqurilish-ijtimoiy", "desc": "Turar-joy va ijtimoiy obyektlarni qurish va ta'mirlash ishlari." },
+      "melioration": { "title": "Melioratsiya va irrigatsiya", "desc": "Suv ta'minoti va yer melioratsiyasi bo'yicha ishlar." },
+      "electrical": { "title": "Katta quvvatdagi Elektr tarmoqlari va Qurulmalarini qurish", "desc": "Yuqori kuchlanishli elektr tarmoqlari va qurilmalarini qurish va o'rnatish." }
+    }
+  },
+  "projects": {
+    "title": "Tanlangan loyihalar",
+    "subtitle": "So'nggi ishlarimizdan namunalar.",
+    "cta": "Loyihangizni muhokama qilamiz",
+    "card_alt": "Loyiha rasmi",
+    "cards": {
+      "title_1": "Turar-joy majmuasi",
+      "desc_1": "Yer osti avtoturargohi bilan 15 qavatli uy.",
+      "images_1": [
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20exterior",
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20interior",
+        "/placeholder.svg?height=220&width=480&query=residential%20complex%20parking"
+      ],
+      "title_2": "Retail fit-out",
+      "desc_2": "Flagman do'kon uchun yuqori darajadagi ichki bezak.",
+      "images_2": [
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20entrance",
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20interior",
+        "/placeholder.svg?height=220&width=480&query=retail%20store%20fitting%20room"
+      ],
+      "title_3": "Logistika markazi",
+      "desc_3": "Ofis mezoniniga ega sanoat ombori.",
+      "images_3": [
+        "/placeholder.svg?height=220&width=480&query=warehouse%20exterior",
+        "/placeholder.svg?height=220&width=480&query=warehouse%20interior",
+        "/placeholder.svg?height=220&width=480&query=warehouse%20office%20area"
+      ]
+    }
+  },
+  "about": {
+    "title": "Oqoltin Ta'mir haqida",
+    "image_alt": "Muhandislar chizmalarni ko'rib chiqmoqda",
+    "body": "\"Oqoltin Ta'mir\" MCHJ — bu 2009-yildan buyon O'zbekiston bozorida samarali faoliyat yuritib kelayotgan, qurilish, texnik xizmat va energetika yo'nalishlarida ixtisoslashgan, yuqori tajribaga ega korxona.",
+    "founder": "Kompaniyamiz asoschisi — 40 yillik muhandislik va rahbarlik tajribasiga ega mutaxassis bo'lib, kompaniya boshidan buyon barqaror rivojlanib, ko'plab yirik loyihalarni muvaffaqiyatli amalga oshirib kelmoqda.",
+    "activities": [
+      "Umumiy qurilish ishlari",
+      "Irrigatsiya va melioratsiya tizimlarini barpo etish",
+      "Katta quvvatdagi elektr tarmoqlari va energetik qurilmalarni qurish"
+    ],
+    "licenses": "Biz elektr tarmoqlari va inshootlarini qurish bo'yicha ruxsat beruvchi maxsus litsenziya va tegishli sertifikatga egamiz, bu esa bizning bu yo'nalishda yuridik va texnik jihatdan to'liq malakaga ega ekanligimizni tasdiqlaydi.",
+    "certificates": [
+      "O'z DSt ISO 9001:2015 — Sifat menejmenti tizimi",
+      "O'z DSt ISO 14001:2019 — Ekologik boshqaruv tizimi",
+      "O'z DSt ISO 45001:2020 — Mehnat xavfsizligi va salomatlikni boshqarish tizimi",
+      "Katta quvvatdagi elektr tarmoqlari va qurilmalarini qurish bo'yicha ruxsatnoma va sertifikat"
+    ],
+    "certificate_files": [
+      {
+        "id": "iso9001",
+        "name": "ISO 9001:2015 Sifat menejmenti tizimi",
+        "filename": "OQOLTIN TA`MIR 9001.pdf",
+        "description": "Sifat menejmenti tizimi sertifikati - Xalqaro sifat boshqaruvi standarti",
+        "icon": "📄"
+      },
+      {
+        "id": "iso14001",
+        "name": "ISO 14001:2019 Ekologik boshqaruv tizimi",
+        "filename": "OQOLTIN TA`MIR 14001.pdf",
+        "description": "Ekologik boshqaruv tizimi sertifikati - Xalqaro ekologik boshqaruv standarti",
+        "icon": "🌱"
+      },
+      {
+        "id": "iso45001",
+        "name": "ISO 45001:2020 Mehnat xavfsizligi va salomatlikni boshqarish tizimi",
+        "filename": "OQOLTIN TA`MIR 45001.pdf",
+        "description": "Mehnat xavfsizligi va salomatlikni boshqarish tizimi sertifikati - Xalqaro ish joyi xavfsizligi standarti",
+        "icon": "🛡️"
+      },
+      {
+        "id": "electrical_license",
+        "name": "Elektr tarmoqlarini qurish bo'yicha litsenziya",
+        "filename": "litsenzya.pdf",
+        "description": "Elektr tarmoqlari va inshootlarini qurish bo'yicha maxsus litsenziya",
+        "icon": "⚡"
+      },
+      {
+        "id": "company_registration",
+        "name": "Kompaniya ro'yxatdan o'tish guvohnomasi",
+        "filename": "OQOLTIN TA`MIR XK.pdf",
+        "description": "Kompaniyaning rasmiy ro'yxatdan o'tish guvohnomasi va biznes litsenziyasi",
+        "icon": "🏢"
+      }
+    ],
+    "technical_base": [
+      "Shalanda",
+      "Avtokran",
+      "Ekskavator",
+      "Manipulyator"
+    ],
+    "why_choose_us": [
+      "15+ yillik barqaror faoliyat",
+      "40 yillik professional rahbarlik tajribasi",
+      "Elektr tarmoqlari bo'yicha maxsus litsenziya va sertifikatlar",
+      "ISO xalqaro standartlariga muvofiq boshqaruv tizimlari",
+      "Kuchli texnik park va tajribali jamoa",
+      "Ishonch, sifat va muddatga qat'iy amal qilish"
+    ],
+    "tagline": "\"Oqoltin Ta'mir\" — Sifatli qurilish. Litsenziyalangan texnik yondashuv. Energetik yechimlarda professional xizmat."
+  },
+  "contact": {
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Loyihangiz haqida yozing. 1 ish kuni ichida javob beramiz.",
+    "address_label": "Manzil",
+    "phone_label": "Telefon",
+    "email_label": "Email",
+    "form": {
+      "name": "Ismingiz",
+      "name_ph": "Ali Valiyev",
+      "email": "Email",
+      "email_ph": "you@example.com",
+      "phone": "Telefon",
+      "phone_ph": "+998 90 123 45 67",
+      "message": "Xabar",
+      "message_ph": "Ish hajmi, muddat, byudjet...",
+      "submit": "Xabar yuborish",
+      "success": "Rahmat! Tez orada bog'lanamiz."
+    }
+  }
+}
