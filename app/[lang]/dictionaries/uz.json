@@ -32,23 +32,27 @@
       "title_1": "Turar-joy majmuasi",
       "desc_1": "Yer osti avtoturargohi bilan 15 qavatli uy.",
       "images_1": [
-        "/placeholder.svg?height=220&width=480&query=residential%20complex%20exterior",
-        "/placeholder.svg?height=220&width=480&query=residential%20complex%20interior",
-        "/placeholder.svg?height=220&width=480&query=residential%20complex%20parking"
+        "/project1/photo_6_2025-08-21_23-39-44.jpg",
+        "/project1/photo_7_2025-08-21_23-39-44.jpg",
+        "/project1/photo_8_2025-08-21_23-39-44.jpg"
       ],
       "title_2": "Retail fit-out",
       "desc_2": "Flagman do'kon uchun yuqori darajadagi ichki bezak.",
       "images_2": [
-        "/placeholder.svg?height=220&width=480&query=retail%20store%20entrance",
-        "/placeholder.svg?height=220&width=480&query=retail%20store%20interior",
-        "/placeholder.svg?height=220&width=480&query=retail%20store%20fitting%20room"
+        "/project2/photo_1_2025-08-21_23-38-19.jpg",
+        "/project2/photo_2_2025-08-21_23-38-19.jpg",
+        "/project2/photo_3_2025-08-21_23-38-19.jpg",
+        "/project2/photo_4_2025-08-21_23-38-19.jpg",
+        "/project2/photo_5_2025-08-21_23-38-19.jpg"
       ],
       "title_3": "Logistika markazi",
       "desc_3": "Ofis mezoniniga ega sanoat ombori.",
       "images_3": [
-        "/placeholder.svg?height=220&width=480&query=warehouse%20exterior",
-        "/placeholder.svg?height=220&width=480&query=warehouse%20interior",
-        "/placeholder.svg?height=220&width=480&query=warehouse%20office%20area"
+        "/project3/photo_1_2025-08-21_23-39-44.jpg",
+        "/project3/photo_2_2025-08-21_23-39-44.jpg",
+        "/project3/photo_3_2025-08-21_23-39-44.jpg",
+        "/project3/photo_4_2025-08-21_23-39-44.jpg",
+        "/project3/photo_5_2025-08-21_23-39-44.jpg"
       ]
     }
   },

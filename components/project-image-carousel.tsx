@@ -39,13 +39,13 @@ export function ProjectImageCarousel({ images, alt, projectIndex }: ProjectImage
   }
 
   return (
-    <div className="relative group">
+    <div className="relative group h-48 w-full">
       <Image
         src={images[currentImageIndex]}
         alt={`${alt} ${currentImageIndex + 1}`}
-        height={220}
-        width={480}
-        className="h-48 w-full object-cover transition-opacity duration-300"
+        fill
+        className="object-cover transition-opacity duration-300"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
       
       {/* Navigation Arrows */}
