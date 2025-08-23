@@ -85,13 +85,6 @@ export function CertificatesViewer({ certificates, lang }: CertificatesViewerPro
               <DialogTitle className="text-xl">
                 {selectedCertificate?.name}
               </DialogTitle>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={closeViewer}
-              >
-                <X className="h-5 w-5" />
-              </Button>
             </div>
           </DialogHeader>
           
