@@ -24,10 +24,10 @@ export default async function RootLayout({
 }>) {
   const { lang } = await params
   const nav = [
-    { id: "services", label: { en: "Services", ru: "Услуги", uz: "Xizmatlar" }[lang] },
-    { id: "projects", label: { en: "Projects", ru: "Проекты", uz: "Loyihalar" }[lang] },
-    { id: "about", label: { en: "About", ru: "О компании", uz: "Biz haqimizda" }[lang] },
-    { id: "contact", label: { en: "Contact", ru: "Контакты", uz: "Bog'lanish" }[lang] },
+    { id: "services", label: { en: "Services", ru: "Услуги", uz: "Xizmatlar" }[lang], href: `/${lang}#services` },
+    { id: "projects", label: { en: "Projects", ru: "Проекты", uz: "Loyihalar" }[lang], href: `/${lang}/projects` },
+    { id: "about", label: { en: "About", ru: "О компании", uz: "Biz haqimizda" }[lang], href: `/${lang}#about` },
+    { id: "contact", label: { en: "Contact", ru: "Контакты", uz: "Bog'lanish" }[lang], href: `/${lang}#contact` },
   ]
 
   return (
@@ -42,7 +42,7 @@ export default async function RootLayout({
               {nav.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/${lang}#${item.id}`}
+                  href={item.href}
                   className={cn(
                     "text-sm text-neutral-700 hover:text-neutral-900 transition-colors"
                   )}
@@ -67,7 +67,7 @@ export default async function RootLayout({
                     {nav.map((item) => (
                       <Link
                         key={item.id}
-                        href={`/${lang}#${item.id}`}
+                        href={item.href}
                         className="text-base text-neutral-800"
                       >
                         {item.label}

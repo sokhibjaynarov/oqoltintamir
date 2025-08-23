@@ -70,7 +70,7 @@ export default async function Page({
           </div>
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=640&width=880"
+              src="/construction-company.jpg"
               alt={dict.hero.image_alt}
               height={640}
               width={880}
@@ -114,13 +114,20 @@ export default async function Page({
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{dict.projects.title}</h2>
               <p className="mt-2 max-w-2xl text-neutral-600">{dict.projects.subtitle}</p>
             </div>
-            <Link href={`/${lang}#contact`} className="hidden sm:block">
-              <Button variant="outline">{dict.projects.cta}</Button>
-            </Link>
+            <div className="flex gap-3">
+              <Link href={`/${lang}/projects`} className="hidden sm:block">
+                <Button variant="outline">
+                  {lang === "uz" ? "Barcha loyihalar" : lang === "ru" ? "Все проекты" : "All Projects"}
+                </Button>
+              </Link>
+              <Link href={`/${lang}#contact`} className="hidden sm:block">
+                <Button variant="outline">{dict.projects.cta}</Button>
+              </Link>
+            </div>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3].map((i) => (
-              <Card key={i} className="overflow-hidden">
+              <Card key={i} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <ProjectImageCarousel
                   images={dict.projects.cards[`images_${i}` as keyof typeof dict.projects.cards] as string[]}
                   alt={`${dict.projects.card_alt} ${i}`}
@@ -130,7 +137,12 @@ export default async function Page({
                   <CardTitle className="text-base">{dict.projects.cards[`title_${i}` as keyof typeof dict.projects.cards] as string}</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-sm text-neutral-600">{dict.projects.cards[`desc_${i}` as keyof typeof dict.projects.cards] as string}</p>
+                  <p className="text-sm text-neutral-600 mb-4">{dict.projects.cards[`desc_${i}` as keyof typeof dict.projects.cards] as string}</p>
+                  <Link href={`/${lang}/projects/${i}`}>
+                    <Button variant="outline" className="w-full">
+                      {lang === "uz" ? "Batafsil ma'lumot" : lang === "ru" ? "Подробнее" : "Learn More"}
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -148,7 +160,7 @@ export default async function Page({
           <div className="grid gap-10 md:grid-cols-2 mb-12">
             <div>
               <Image
-                src="/placeholder.svg?height=560&width=720"
+                src="/construction.jpg"
                 alt={dict.about.image_alt}
                 height={560}
                 width={720}
