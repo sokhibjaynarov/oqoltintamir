@@ -21,10 +21,8 @@ export async function generateStaticParams() {
 
 export default async function Page({
   params,
-  searchParams,
 }: {
   params: Promise<{ lang: Lang }>
-  searchParams: Promise<{ sent?: string }>
 }) {
   try {
     const { lang } = await params
@@ -34,7 +32,6 @@ export default async function Page({
     }
     
     const dict = await getDictionary(lang)
-    const { sent } = await searchParams
 
 
 
@@ -308,13 +305,6 @@ export default async function Page({
             </div>
             <div>
               <ContactForm lang={lang} dict={dict} />
-              {sent === "1" ? (
-                <div className="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-md">
-                  <p role="status" className="text-sm text-emerald-700">
-                    {dict.contact.form.success}
-                  </p>
-                </div>
-              ) : null}
             </div>
           </div>
         </div>
