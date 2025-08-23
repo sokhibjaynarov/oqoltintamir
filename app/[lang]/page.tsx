@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building2, Hammer, Ruler, HardHat, Layers, MapPinned, Phone, Mail, MapPin, ChevronLeft, ChevronRight, Check } from 'lucide-react'
 import { getDictionary } from "./dictionaries"
-import { redirect } from "next/navigation"
 import { ProjectImageCarousel } from "@/components/project-image-carousel"
 import { CertificatesViewer } from "@/components/certificates-viewer"
+import { ContactForm } from "@/components/contact-form"
 
 type Lang = "en" | "ru" | "uz"
 
@@ -21,12 +21,7 @@ export default async function Page({
   const dict = await getDictionary(lang)
   const { sent } = await searchParams
 
-  async function sendMessage(formData: FormData) {
-    "use server"
-    // In production, send an email or store in DB
-    // For demo, just redirect with a success flag
-    redirect(`/${lang}?sent=1#contact`)
-  }
+
 
   return (
     <>
@@ -273,15 +268,15 @@ export default async function Page({
                   <MapPin className="mt-0.5 h-5 w-5 text-emerald-700" />
                   <div>
                     <div className="font-medium">{dict.contact.address_label}</div>
-                    <div>Tashkent, Uzbekistan</div>
+                    <div>Guliston, Sirdaryo</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Phone className="mt-0.5 h-5 w-5 text-emerald-700" />
                   <div>
                     <div className="font-medium">{dict.contact.phone_label}</div>
-                    <a href="tel:+998901234567" className="hover:underline">
-                      +998 90 123 45 67
+                    <a href="tel:+998995555007" className="hover:underline">
+                      +998 99 555 50 07
                     </a>
                   </div>
                 </div>
@@ -297,70 +292,14 @@ export default async function Page({
               </div>
             </div>
             <div>
-              <form action={sendMessage} className="rounded-lg border bg-white p-6 shadow-sm">
-                <div className="grid gap-4">
-                  <div>
-                    <label htmlFor="name" className="mb-1 block text-sm font-medium">
-                      {dict.contact.form.name}
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      required
-                      className="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none ring-0 transition focus:border-emerald-600"
-                      placeholder={dict.contact.form.name_ph}
-                    />
-                  </div>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="email" className="mb-1 block text-sm font-medium">
-                        {dict.contact.form.email}
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        required
-                        className="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none ring-0 transition focus:border-emerald-600"
-                        placeholder={dict.contact.form.email_ph}
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="mb-1 block text-sm font-medium">
-                        {dict.contact.form.phone}
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        name="phone"
-                        className="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none ring-0 transition focus:border-emerald-600"
-                        placeholder={dict.contact.form.phone_ph}
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="mb-1 block text-sm font-medium">
-                      {dict.contact.form.message}
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={4}
-                      className="block w-full rounded-md border border-neutral-300 bg-white px-3 py-2 text-sm outline-none ring-0 transition focus:border-emerald-600"
-                      placeholder={dict.contact.form.message_ph}
-                    />
-                  </div>
-                  <Button type="submit" className="bg-emerald-700 hover:bg-emerald-800 text-white">
-                    {dict.contact.form.submit}
-                  </Button>
-                  {sent === "1" ? (
-                    <p role="status" className="text-sm text-emerald-700">
-                      {dict.contact.form.success}
-                    </p>
-                  ) : null}
+              <ContactForm lang={lang} dict={dict} />
+              {sent === "1" ? (
+                <div className="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded-md">
+                  <p role="status" className="text-sm text-emerald-700">
+                    {dict.contact.form.success}
+                  </p>
                 </div>
-              </form>
+              ) : null}
             </div>
           </div>
         </div>
