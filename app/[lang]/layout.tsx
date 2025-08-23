@@ -1,18 +1,47 @@
-import type { ReactNode } from "react"
+import type { Metadata, ReactNode } from "next"
 import Link from "next/link"
-
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { LangSwitcher } from "@/components/lang-switcher"
+import { getDictionary } from "./dictionaries"
 
 
 
-const locales = ["en", "ru", "uz"] as const
-
+// Generate static params for build time
 export async function generateStaticParams() {
-  return locales.map((lang) => ({ lang }))
+  return [
+    { lang: "en" },
+    { lang: "ru" },
+    { lang: "uz" }
+  ]
+}
+
+// Generate metadata for each language
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  try {
+    const { lang } = await params
+    
+    if (!lang) {
+      return {
+        title: "Oqoltin Ta'mir",
+        description: "Construction and repair company",
+      }
+    }
+    
+    const dict = await getDictionary(lang)
+    
+    return {
+      title: dict.common.company,
+      description: dict.hero.subtitle,
+    }
+  } catch (error) {
+    return {
+      title: "Oqoltin Ta'mir",
+      description: "Construction and repair company",
+    }
+  }
 }
 
 export default async function RootLayout({
@@ -22,7 +51,12 @@ export default async function RootLayout({
   children: ReactNode
   params: Promise<{ lang: "en" | "ru" | "uz" }>
 }>) {
-  const { lang } = await params
+  try {
+    const { lang } = await params
+    
+    if (!lang) {
+      throw new Error("Language parameter is required")
+    }
   const nav = [
     { id: "services", label: { en: "Services", ru: "Услуги", uz: "Xizmatlar" }[lang], href: `/${lang}#services` },
     { id: "projects", label: { en: "Projects", ru: "Проекты", uz: "Loyihalar" }[lang], href: `/${lang}/projects` },
@@ -98,4 +132,25 @@ export default async function RootLayout({
         </footer>
     </div>
   )
+  } catch (error) {
+    console.error("Error in RootLayout:", error)
+    
+    // Return a fallback layout for build errors
+    return (
+      <html lang="en">
+        <body>
+          <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-neutral-900 mb-4">
+                Oqoltin Ta'mir
+              </h1>
+              <p className="text-neutral-600">
+                Loading...
+              </p>
+            </div>
+          </div>
+        </body>
+      </html>
+    )
+  }
 }

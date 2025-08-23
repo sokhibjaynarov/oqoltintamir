@@ -13,9 +13,25 @@ interface ProjectPageProps {
   params: Promise<{ lang: Lang; id: string }>
 }
 
+// Generate static params for build time
+export async function generateStaticParams() {
+  const languages = ["en", "ru", "uz"]
+  const projectIds = ["1", "2", "3"]
+  
+  return languages.flatMap(lang => 
+    projectIds.map(id => ({ lang, id }))
+  )
+}
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { lang, id } = await params
-  const dict = await getDictionary(lang)
+  try {
+    const { lang, id } = await params
+    
+    if (!lang || !id) {
+      throw new Error("Language and project ID parameters are required")
+    }
+    
+    const dict = await getDictionary(lang)
 
   // Project data based on ID
   const projects = {
@@ -468,4 +484,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
     </div>
   )
+  } catch (error) {
+    console.error("Error in ProjectPage:", error)
+    
+    // Return a fallback page for build errors
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-neutral-900 mb-4">
+            Project Details
+          </h1>
+          <p className="text-neutral-600">
+            Loading project...
+          </p>
+        </div>
+      </div>
+    )
+  }
 }

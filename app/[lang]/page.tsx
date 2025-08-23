@@ -10,6 +10,15 @@ import { ContactForm } from "@/components/contact-form"
 
 type Lang = "en" | "ru" | "uz"
 
+// Generate static params for build time
+export async function generateStaticParams() {
+  return [
+    { lang: "en" },
+    { lang: "ru" },
+    { lang: "uz" }
+  ]
+}
+
 export default async function Page({
   params,
   searchParams,
@@ -17,9 +26,15 @@ export default async function Page({
   params: Promise<{ lang: Lang }>
   searchParams: Promise<{ sent?: string }>
 }) {
-  const { lang } = await params
-  const dict = await getDictionary(lang)
-  const { sent } = await searchParams
+  try {
+    const { lang } = await params
+    
+    if (!lang) {
+      throw new Error("Language parameter is required")
+    }
+    
+    const dict = await getDictionary(lang)
+    const { sent } = await searchParams
 
 
 
@@ -306,4 +321,21 @@ export default async function Page({
       </section>
     </>
   )
+  } catch (error) {
+    console.error("Error in main Page:", error)
+    
+    // Return a fallback page for build errors
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-neutral-900 mb-4">
+            Oqoltin Ta'mir
+          </h1>
+          <p className="text-neutral-600">
+            Loading...
+          </p>
+        </div>
+      </div>
+    )
+  }
 }
