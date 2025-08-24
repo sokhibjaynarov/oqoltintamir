@@ -10,27 +10,23 @@ import { ContactForm } from "@/components/contact-form"
 
 type Lang = "en" | "ru" | "uz"
 
-// Generate static params for build time
-export async function generateStaticParams() {
-  return [
-    { lang: "en" },
-    { lang: "ru" },
-    { lang: "uz" }
-  ]
-}
-
 export default async function Page({
   params,
 }: {
   params: Promise<{ lang: Lang }>
 }) {
   try {
-    const { lang } = await params
+    if (!params) {
+      throw new Error("Params are required")
+    }
     
-    if (!lang) {
+    const resolvedParams = await params
+    
+    if (!resolvedParams || !resolvedParams.lang) {
       throw new Error("Language parameter is required")
     }
     
+    const { lang } = resolvedParams
     const dict = await getDictionary(lang)
 
 

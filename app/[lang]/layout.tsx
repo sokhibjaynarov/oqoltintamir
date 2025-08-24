@@ -1,4 +1,5 @@
-import type { Metadata, ReactNode } from "next"
+import type { Metadata } from "next"
+import type { ReactNode } from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -7,29 +8,19 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { LangSwitcher } from "@/components/lang-switcher"
 import { getDictionary } from "./dictionaries"
 
-
-
-// Generate static params for build time
-export async function generateStaticParams() {
-  return [
-    { lang: "en" },
-    { lang: "ru" },
-    { lang: "uz" }
-  ]
-}
-
 // Generate metadata for each language
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ lang: "en" | "ru" | "uz" }> }) {
   try {
-    const { lang } = await params
+    const resolvedParams = await params
     
-    if (!lang) {
+    if (!resolvedParams || !resolvedParams.lang) {
       return {
         title: "Oqoltin Ta'mir",
         description: "Construction and repair company",
       }
     }
     
+    const { lang } = resolvedParams
     const dict = await getDictionary(lang)
     
     return {
@@ -52,11 +43,17 @@ export default async function RootLayout({
   params: Promise<{ lang: "en" | "ru" | "uz" }>
 }>) {
   try {
-    const { lang } = await params
+    if (!params) {
+      throw new Error("Params are required")
+    }
     
-    if (!lang) {
+    const resolvedParams = await params
+    
+    if (!resolvedParams || !resolvedParams.lang) {
       throw new Error("Language parameter is required")
     }
+    
+    const { lang } = resolvedParams
   const nav = [
     { id: "services", label: { en: "Services", ru: "Услуги", uz: "Xizmatlar" }[lang], href: `/${lang}#services` },
     { id: "projects", label: { en: "Projects", ru: "Проекты", uz: "Loyihalar" }[lang], href: `/${lang}/projects` },

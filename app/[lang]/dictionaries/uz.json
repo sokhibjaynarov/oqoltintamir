@@ -29,14 +29,14 @@
     "cta": "Loyihangizni muhokama qilamiz",
     "card_alt": "Loyiha rasmi",
     "cards": {
-      "title_1": "Turar-joy majmuasi",
+      "title_1": "Umumqurilish-ijtimoiy",
       "desc_1": "Yer osti avtoturargohi bilan 15 qavatli uy.",
       "images_1": [
         "/project1/photo_6_2025-08-21_23-39-44.jpg",
         "/project1/photo_7_2025-08-21_23-39-44.jpg",
         "/project1/photo_8_2025-08-21_23-39-44.jpg"
       ],
-      "title_2": "Retail fit-out",
+      "title_2": "Melioratsiya va irrigatsiya",
       "desc_2": "Flagman do'kon uchun yuqori darajadagi ichki bezak.",
       "images_2": [
         "/project2/photo_1_2025-08-21_23-38-19.jpg",
@@ -45,7 +45,7 @@
         "/project2/photo_4_2025-08-21_23-38-19.jpg",
         "/project2/photo_5_2025-08-21_23-38-19.jpg"
       ],
-      "title_3": "Logistika markazi",
+      "title_3": "Katta quvvatdagi Elektr tarmoqlari va Qurulmalarini qurish",
       "desc_3": "Ofis mezoniniga ega sanoat ombori.",
       "images_3": [
         "/project3/photo_1_2025-08-21_23-39-44.jpg",

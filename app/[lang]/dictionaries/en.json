@@ -29,14 +29,14 @@
     "cta": "Discuss your project",
     "card_alt": "Project image",
     "cards": {
-      "title_1": "Residential Complex",
+      "title_1": "General Construction & Social Facilities",
       "desc_1": "15-story residential block with underground parking.",
       "images_1": [
         "/project1/photo_6_2025-08-21_23-39-44.jpg",
         "/project1/photo_7_2025-08-21_23-39-44.jpg",
         "/project1/photo_8_2025-08-21_23-39-44.jpg"
       ],
-      "title_2": "Retail Fit-Out",
+      "title_2": "Land Reclamation & Irrigation",
       "desc_2": "High-end interior fit-out for flagship store.",
       "images_2": [
         "/project2/photo_1_2025-08-21_23-38-19.jpg",
@@ -45,7 +45,7 @@
         "/project2/photo_4_2025-08-21_23-38-19.jpg",
         "/project2/photo_5_2025-08-21_23-38-19.jpg"
       ],
-      "title_3": "Logistics Hub",
+      "title_3": "High-Voltage Electrical Networks & Equipment Construction",
       "desc_3": "Industrial warehouse with office mezzanine.",
       "images_3": [
         "/project3/photo_1_2025-08-21_23-39-44.jpg",
