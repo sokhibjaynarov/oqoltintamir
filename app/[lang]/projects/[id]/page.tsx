@@ -13,31 +13,19 @@ interface ProjectPageProps {
   params: Promise<{ lang: Lang; id: string }>
 }
 
-// Force static generation
-export const dynamic = 'force-static'
-
-// Generate static params for build time
-export async function generateStaticParams() {
-  const languages = ["en", "ru", "uz"]
-  const projectIds = ["1", "2", "3"]
-  
-  return languages.flatMap(lang => 
-    projectIds.map(id => ({ lang, id }))
-  )
-}
-
 export default async function ProjectPage({ params }: ProjectPageProps) {
   try {
     if (!params) {
       throw new Error("Params are required")
     }
     
-    const { lang, id } = await params
+    const resolvedParams = await params
     
-    if (!lang || !id) {
+    if (!resolvedParams || !resolvedParams.lang || !resolvedParams.id) {
       throw new Error("Language and project ID parameters are required")
     }
     
+    const { lang, id } = resolvedParams
     const dict = await getDictionary(lang)
 
     // Project data based on ID

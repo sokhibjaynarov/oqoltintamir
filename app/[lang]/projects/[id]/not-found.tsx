@@ -7,7 +7,8 @@ interface NotFoundProps {
 }
 
 export default async function NotFound({ params }: NotFoundProps) {
-  const { lang } = await params
+  const resolvedParams = await params
+  const { lang } = resolvedParams
 
   return (
     <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
